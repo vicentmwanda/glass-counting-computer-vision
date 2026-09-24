@@ -41,10 +41,11 @@ Both heads are conditioned on the CNN representation and engineered features, in
 The model uses four losses:
 
 $$
-   \text{loss} =  \lambda_{\text{huber}} \times \mathrm{huber\_loss}
-   + \lambda_{\text{mae}} \times \mathrm{mae\_loss}   
-   + \lambda_{\text{ce}} \times \mathrm{ce\_loss}   
-   + \lambda_{\text{consist}} \times \mathrm{consist\_loss}
+\text{loss} =
+\lambda_{\text{huber}} \times \mathrm{huber\_loss}
++ \lambda_{\text{mae}} \times \mathrm{mae\_loss}
++ \lambda_{\text{ce}} \times \mathrm{ce\_loss}
++ \lambda_{\text{consist}} \times \mathrm{consist\_loss}
 $$
 
 The Huber and MAE losses train the regression head, cross-entropy trains the classification head, and the consistency loss encourages the regression head to use the classifier's prediction.
